@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>EasyRash</title>
+
+	<link type="text/css" href="css/bootstrap.css" rel="stylesheet">
+	<link type="text/css" href="css/stileLogin.css" rel="stylesheet">
+  <link type="text/css" href="css/jquery-ui.css" rel="stylesheet">
+   
+	<!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+	
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+   
+     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/auth.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Easy<span>Rash</span></div>
+		</div>
+		<br>
+		<div class="login" id="divLogin">
+		<fieldset>
+				<input type="email" placeholder="email" name="email" id="email"><br>
+				<input type="password" placeholder="password" name="password" id="psw"><br>
+				<input type="button" value="Login" id="checkUser"></fieldset><br>
+				<input type="button" value="Create an account" data-toggle="modal" data-target="#signup" id="signupNewUser">
+		</div>
+
+
+		<div id="signup" class="modal fade" aria-hidden="true">
+      	<div class="modal-dialog">
+          	<div class="modal-content">
+              	<div class="modal-header">
+                  	<button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                  	<h4 class="modal-title">Compila i campi seguenti: </h4>
+              	</div><!-- /.modal-header -->
+              	<div class="modal-body">
+
+                  	<label for="nameNewUser"> </label><input type="text" placeholder="Name" name="name" id="nameNewUser"><br><br>
+                  	<label for="lastnameNewUser"> </label><input type="text" placeholder="Last Name" name="lastName" id="lastnameNewUser"><br><br>
+                  	<label for="emailNewUser"> </label><input type="email" placeholder="Email" name="email" id="emailNewUser"><br><br>
+                  	<label for="pswNewUser"> </label><input type="password" placeholder="Password" name="password" id="pswNewUser"><br><br>
+                  	<label for="confirmpsw"> </label><input type="password" placeholder="Confirm password" name="confirmPassword" id="confirmpsw"><br><br>
+                  	<div id="divGender">
+                  		<label for="male">Male: </label><input type="radio" name="gender" value="male" id="radioMale">
+                  		<label for="female">Female: </label><input type="radio" name="gender" value="female" id="radioFemale">
+                  	</div>
+                  	<input type="button" value="Create account" id="checkSignUp">
+                  	<input type="button" value="Reset" id="resetField">
+              	</div><!-- /.modal-body -->
+          	</div><!-- /.modal-content -->
+      	</div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  </body>
+</html>
