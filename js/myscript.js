@@ -2,9 +2,10 @@ var documentiAperti = [];
 var arrayListaDocumenti = [];
 
 function verifyUserAuth() {
+    if($("#userLoggedIn span").empty()){ 
     console.log(sessionStorage);
-    $("#userLoggedIn span").append(sessionStorage.getItem("LoggedUser"));
-
+    $("#userLoggedIn span").append(sessionStorage.getItem("LoggedUser")); 
+    }
 }
 
 function verifyAuthentication() {
@@ -131,7 +132,7 @@ function openDocument(doc){
 }
 function cambiaContenuto(string) {   //funzione che al click di un bottone nella index apre un contenuto diverso
 if(string=="profile"){
-        $("#page-container").load("pages/profile.php");
+        $("#page-container").load("pages/profile.html");
     }
 if(string=="document"){
         $("#page-container").load("pages/document.html");

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>Profile</title>
+
+        <link type="text/css" href="css/bootstraptabs.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Your Profile</h3>
+                            <span class="pull-right">
+                                <!-- Tabs -->
+                                <ul class="nav panel-tabs">
+                                    <li class="active"><a href="#tab1" data-toggle="tab">Info</a></li>
+                                    <li><a href="#tab2" data-toggle="tab">Change Email</a></li>
+                                    <li><a href="#tab3" data-toggle="tab">Change Psw</a></li>
+                                    <li><a href="#tab4" data-toggle="tab">Delete Account</a></li>
+                                </ul>
+                            </span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab1"> </div>
+                                <div class="tab-pane" id="tab2"></div>
+                                <div class="tab-pane" id="tab3"> </div>
+                                <div class="tab-pane" id="tab4"> 
+                                    <form action ="#" method="POST">
+                                        <label>Once you delete your account, there is no going back. Please be certain. </label>
+                                        <a style="background-color:#c92121" class='btn btn-lg btn-default btn-block' href="#" data-toggle="modal" data-target="#remove">Delete</a>
+                                        <!--<button class='btn btn-lg btn-default btn-block' type="submit" name="remove" value="delete"><span class="fa fa-times"></span> Delete</button>-->
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content panel-warning">
+                    <div class="modal-header panel-heading">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Warning</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Are you sure?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                        <button style="background-color:#c92121" id="yesremove" type="button" class="btn btn-primary">Yes</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+        <script type="text/javascript" src="js/profile.js"></script> 
+    </body>
+</html>

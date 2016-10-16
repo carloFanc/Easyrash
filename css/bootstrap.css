@@ -5285,12 +5285,12 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #bce8f1;
 }
 .panel-warning {
-  border-color: #faebcc;
+  border-color: #333;
 }
 .panel-warning > .panel-heading {
-  color: #8a6d3b;
-  background-color: #fcf8e3;
-  border-color: #faebcc;
+  color: white;
+  background-color: #333;
+  border-color: #333;
 }
 .panel-warning > .panel-heading + .panel-collapse > .panel-body {
   border-top-color: #faebcc;
@@ -5475,7 +5475,7 @@ button.close {
 .modal-body {
   position: relative;
   padding: 30px;
-  overflow: hidden,
+  overflow: hidden
 }
 .modal-body button{
   border-radius: 4px;

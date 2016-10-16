@@ -1,26 +1,35 @@
-$(document).ready(function() {
-	var dati = "dati="+sessionStorage.getItem("LoggedUser");
+$(document).ready(function () {
+    var dati = sessionStorage.getItem("LoggedUser");
 
-$.ajax({
-	    type: "POST",
-		url: "php/profileRequests.php",
-		data: dati,
-		dataType: "json",
-	    success : function (data) {
+    $.ajax({
+        type: 'POST',
+        url: 'php/profileRequests.php',
+        data: {dati: dati},
+        success: function (data) {
+            var res = data.split(";");
+            html = "<div> Name: " + res[0] + "</br> Surname: " + res[1] + "</br> Email: " + res[2] + "</br> Password: " + res[3] + "</br> Sex: " + res[4] + "</div>";
+            $("#tab1").html(html);
+        },
+        error: function (data) {
+            alert("errore recupero dati");
+        }
+    });
+    $("#yesremove").click(function () {
+        $.ajax({
+            type: 'POST',
+            url: 'php/deleteProfile.php',
+            data: {dati: dati},
+            success: function (data) {
+                if (data === "success") {
+                    alert("User deleted. You will be redirected in login page.")
+                    window.location.replace("login.html");
+                }
+            },
+            error: function () {
+                alert("Error");
+            }
 
-		alert(data);
-		/*namesurname = data.given_name + " " + data.family_name;
-		$(".card-title#profileTitle").html( namesurname);
-		$mailsex = $( "<p>Email: " + data.email + "</p><p>Sex: " + data.sex + "</p>");
-		$("#profileInfo").html( $mailsex);
-*/   },
-	     error: function (data) {
-		
-		//	$err = $("<h2>" + jqXHR.status + " Error: " + textStatus + "</h2>");
-		 alert(data);
-			/*$err.css({"text-align":"center"});
-			$("#profileContainer").html( $err);
-			*/
-	}
-});
+        });
+    });
+
 });

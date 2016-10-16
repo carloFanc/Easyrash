@@ -32,7 +32,6 @@ function login() {
 			    		location.replace("index.html");
 			    		findUser = true;
 			    		return false;
-			    		// ""+field.given_name+" "+field.family_name+""
 		    		}
 		    		else {
 		    			return true;
@@ -43,7 +42,7 @@ function login() {
 		    	});
 	    	if(findUser===false){
 		    		$(".login").html("<div class='alert alert-danger'><a href='javascript:window.location.href=window.location.href' class='close' data-dismiss='alert' aria-label='close'>&times;</a><strong>Utente inesistente!</strong> Riprova inserendo le credenziali corrette</div>");
-	    			// alert("utente inesistente");
+	    			 
 	    		}
 			});
 			 
@@ -98,7 +97,7 @@ function signup() {
   						type: 'POST',
   						url: 'php/registration.php',  
   						data : data_string,
-  						dataType: 'json',                   
+  						dataType: 'html',                   
   						success: function(data){
  							 if(data == '1'){
     							    $(".modal-body").html("<div class='alert alert-success'><strong>Creazione nuovo utente effettuata! Attendi email di verifica.</strong></div>");
