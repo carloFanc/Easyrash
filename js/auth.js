@@ -105,7 +105,7 @@ function signup() {
     							    alert("Errore email gia esistente!");
    							 }
          										}, 
-  						error: function(data){
+  						error: function(){
   							  alert("Errore invio dati!"); 
   							 	}
 					});

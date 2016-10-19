@@ -12,7 +12,7 @@
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">Your Profile</h3>
-                            <span class="pull-right">
+                            <div class="pull-right">
                                 <!-- Tabs -->
                                 <ul class="nav panel-tabs">
                                     <li class="active"><a href="#tab1" data-toggle="tab">Info</a></li>
@@ -20,13 +20,40 @@
                                     <li><a href="#tab3" data-toggle="tab">Change Psw</a></li>
                                     <li><a href="#tab4" data-toggle="tab">Delete Account</a></li>
                                 </ul>
-                            </span>
+                            </div>
                         </div>
                         <div class="panel-body">
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tab1"> </div>
-                                <div class="tab-pane" id="tab2"></div>
-                                <div class="tab-pane" id="tab3"> </div>
+                                <div class="tab-pane" id="tab2">
+                                    <form>
+                                        <div id="email" class="form-group"> <!-- Email field 1  !--> 
+                                            <input id= "email" name="email" type="email" class="form-control"  placeholder="Insert New Email">
+                                        </div>
+                                        <div id="email_confirm" class="form-group"> <!-- Email field confirm  !--> 
+                                            <input name="email_confirm" type="email" class="form-control"   placeholder="Confirm New Email">
+                                        </div>
+                                        <div style="text-align: center" class="form-group"> <!-- Submit button !-->
+                                            <button id="EmailSubmit" type="submit" class="btn btn-primary">Submit</button>
+                                        </div>	
+                                    </form>
+                                </div>
+                                <div class="tab-pane" id="tab3">
+                                    <form>
+                                        <div class="form-group"> <!-- Old Password  !--> 
+                                            <input type="password" class="form-control" id="oldpassword" name="oldpassword" placeholder="Insert Old Password">
+                                        </div>
+                                        <div class="form-group"> <!-- New Passoword  !--> 
+                                            <input type="password" class="form-control" id="newpassword" name="newpassword" placeholder="Insert New Password">
+                                        </div>
+                                        <div class="form-group"> <!-- Confirm New Passoword  !--> 
+                                            <input type="password" class="form-control" id="newpassword_confirm" name="newpassword_confirm" placeholder="Confirm New Password">
+                                        </div>
+                                        <div style="text-align: center" class="form-group"> <!-- Submit button !-->
+                                            <button id="PasswordSubmit" type="submit" class="btn btn-primary">Submit</button>
+                                        </div>	
+                                    </form>
+                                </div>
                                 <div class="tab-pane" id="tab4"> 
                                     <form action ="#" method="POST">
                                         <label>Once you delete your account, there is no going back. Please be certain. </label>
