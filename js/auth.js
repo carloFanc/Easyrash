@@ -1,11 +1,8 @@
-function main(){
-	login();
-	signup();
-	reset();
-}
+$(document).ready(function () {
+
 
 function login() {
-	$("#checkUser").click(function() {
+	
 		var email = $("#email").val();
 		var password = $("#psw").val();
 		var findUser = false;
@@ -47,9 +44,17 @@ function login() {
 			});
 			 
 		}
-	});
-}
-
+            }
+ 
+$('#checkUser').click(function(){
+    login();
+});
+document.onkeydown = function (e) {
+    var keyCode = e.keyCode;
+    if(keyCode == 13) {
+        login();
+    }
+};
 function signup() {
 	$("#checkSignUp").click(function(){
 		var name = $("#nameNewUser").val();
@@ -106,7 +111,7 @@ function signup() {
    							 }
          										}, 
   						error: function(){
-  							  alert("Errore invio dati!"); 
+  							  alert("Error sending data!"); 
   							 	}
 					});
 		} 
@@ -127,6 +132,10 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-$(function() {
-	main();
+/* $(function() {
+	login();
+	signup();
+	reset();
+});*/
+ 
 });

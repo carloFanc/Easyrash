@@ -2,31 +2,26 @@
 
 $dataFirstJson = file_get_contents('../json/listUsers.json');
 $FirstJson = json_decode($dataFirstJson, true);
-//$old_email = $_POST['old_email'];
-$new_email = json_encode($_POST['new_email'] );
-/*$emails = json_decode($data, true);
-$Simply_emails = array();
+$old_email = $_POST['old_email'];
+$new_email = $_POST['new_email'];  
 $flag = true;
 $i=0;
 $JsonRecovered = "";
-foreach ($emails as $field => $value) {
-    $Simply_emails[$i] = $value;  //in posizione 0 c'è la stringa con l'email vecchia, in posizione 1 quella nuova 
-    $i++;
-}
+ 
 foreach ($FirstJson as $field => $value) { // controllo se in entrambi i json risulta già l'email in input 
-   if (strpos($value['email'], $Simply_emails[1]) !== false) {
+   if (strpos($value['email'], $new_email ) !== false) {
         $flag = false;
     }
 }
 if ($flag) {
     foreach ($FirstJson as $field => $value) {
-        if (strpos($field, $Simply_emails[0]) !== false) {
+        if (strpos($field, $old_email) !== false) {
 
             $temp = explode(" ", $field);
             unset($FirstJson[$field]);
 
             $pattern = $temp[2];
-            $replacement = $Simply_emails[1];
+            $replacement = $new_email;
             $subject = $field;
             $new_string = preg_replace($pattern, $replacement, $subject, -1);
 
@@ -35,13 +30,13 @@ if ($flag) {
             foreach ($value as $key => $value2) {
                 if ($counter != 4) {
                     if (strpos($key, "email") !== false) {
-                        $JsonRecovered .= '"' . $key . '": "' . $Simply_emails[1] . '",';
+                        $JsonRecovered .= '"' . $key . '": "' . $new_email . '",';
                     } else {
                         $JsonRecovered .= '"' . $key . '": "' . $value2 . '",';
                     }
                 } else {
                     if (strpos($key, "email") !== false) {
-                        $JsonRecovered .= '"' . $key . '": "' . $Simply_emails[1] . '"}}';
+                        $JsonRecovered .= '"' . $key . '": "' . $new_email . '"}}';
                     } else {
                         $JsonRecovered .= '"' . $key . '": "' . $value2 . '"}}';
                     }
@@ -57,11 +52,11 @@ if ($flag) {
     $file = fopen('../json/listUsers.json', 'w');
     fwrite($file, $FirstJson);
     fclose($file);
-    $success_or_failure = "1";*/
-    echo $new_email;
-//} else {
-  //  $success_or_failure = "0";
-    //echo $success_or_failure;
-//}
+    $success_or_failure = "1"; 
+    echo $success_or_failure;
+ } else {
+     $success_or_failure = "0";
+     echo $success_or_failure;
+ }
 ?>
 

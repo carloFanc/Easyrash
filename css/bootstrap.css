@@ -916,7 +916,7 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #428bca;
+  color: #2a6496;
   text-decoration: none;
 }
 a:hover,
@@ -5217,7 +5217,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-default > .panel-heading {
   color: #333;
-  background-color: #f5f5f5;
+  background-color: #ababab;
   border-color: #ddd;
 }
 .panel-default > .panel-heading + .panel-collapse > .panel-body {
