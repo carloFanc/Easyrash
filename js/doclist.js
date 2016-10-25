@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() { //appena si apre la pagina con i documenti carica i documenti chair
        var identify_tab="tab1"; 
        var dati = 'tab='+ identify_tab + '&user='+sessionStorage.getItem("LoggedUser");
  
@@ -17,7 +17,7 @@ $(document).ready(function() {
         }); 
 });
 
-     $("#doctab1").click(function() {
+     $("#doctab1").click(function() { // carica i documenti del chair dopo click tab2
          var identify_tab="tab1";
           
          var dati = 'tab='+ identify_tab + '&user='+sessionStorage.getItem("LoggedUser");
@@ -37,7 +37,7 @@ $(document).ready(function() {
         });
     
     });
-    $("#doctab2").click(function() {
+    $("#doctab2").click(function() { // carica i documenti del reviewer dopo click tab2
         var identify_tab="";
          identify_tab = "tab2";
          var dati = 'tab='+ identify_tab + '&user='+sessionStorage.getItem("LoggedUser");
@@ -58,7 +58,7 @@ $(document).ready(function() {
     
     });
     
-    $("#doctab3").click(function() {
+    $("#doctab3").click(function() { // carica i documenti dell' author dopo click tab3
         var identify_tab="";
          identify_tab = "tab3";
          var dati = 'tab='+ identify_tab + '&user='+sessionStorage.getItem("LoggedUser");
@@ -79,14 +79,17 @@ $(document).ready(function() {
     
     });
   
-function openDocument(titledoc) {
+function openDocument(titleDoc) {
+    sessionStorage.setItem('titleDoc', titleDoc);
+    
     $.ajax({
         type: 'POST',
         url: 'php/loadIndexPage.php',
-        data: {titledoc:titledoc},
+        data: {titledoc:titleDoc},
         dataType: 'html',
         success: function (data) {
-            alert(data);
+            sessionStorage.setItem('urlDoc', data);
+            $("#page-container").load("pages/document.html");
         }
     });
 }

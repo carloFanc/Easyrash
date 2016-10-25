@@ -48,13 +48,6 @@
         "pass": "john.constantine",
         "sex": "male"
     },
-    "Fabio Vitali <fabio.vitali@unibo.it>": {
-        "given_name": "Fabio",
-        "family_name": "Vitali",
-        "email": "fabio.vitali@unibo.it",
-        "pass": "fabio.vitali",
-        "sex": "male"
-    },
     "Angelo Di Iorio <angelo.diiorio@unibo.it>": {
         "given_name": "Angelo",
         "family_name": "Di Iorio",
@@ -180,5 +173,12 @@
         "email": "vahdati@example.com",
         "pass": "vahdati",
         "sex": "female"
+    },
+    "Fabio Vitali <fb@unibo.it>": {
+        "given_name": "Fabio",
+        "family_name": "Vitali",
+        "email": "fb@unibo.it",
+        "pass": "fb",
+        "sex": "male"
     }
 }
