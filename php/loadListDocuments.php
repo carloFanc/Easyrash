@@ -5,11 +5,12 @@ $dataEvents = json_decode($dataEvents, true);
 $dataUser = $_POST['user'];
 $identify_tab = $_POST['tab'];
 if (strcmp($identify_tab, "tab1") == 0) { //CHAIR
-    $test = "";
+    
     $i = 0;
     $stringFinalData = "<div class=\"container\"><div class=\"panel-group\" id=\"accordion1\">";
     foreach ($dataEvents as $field) { // controllo se in entrambi i json risulta già l'email in input 
         foreach ($field as $field2 => $value2) {
+            $test = "";
             $stringFinalData .= "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" data-parent=\"#accordion1\" href=\"#tab1" . $i . "\"  >" . $value2["conference"] . "</a></h4></div><div id=\"tab1" . $i . "\" class=\"panel-collapse collapse\">";
 
             foreach ($dataEvents as $field123 => $value123) {
@@ -19,27 +20,30 @@ if (strcmp($identify_tab, "tab1") == 0) { //CHAIR
                     }
                 }
             }
-             if(strcmp(gettype($test),"array")==0){
-            foreach ($test as $test1) {
-               $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\")'>\"" . $test1 . "</a></div>";
-            }
-            }else{
+            if (strcmp(gettype($test), "array") == 0) {
+                foreach ($test as $test1) {
+                    $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\",\"chair\")'>\"" . $test1 . "</a></div>";
+                }
+            } else {
                 $stringFinalData .= "<div class=\"panel-body\">" . "No matching document found." . "</div>";
             }
             $stringFinalData .= "</div></div>";
             $i++;
+            unset($test);
         }
+        
+            
     }
-    $stringFinalData .= "</div> </div> </div>";;
+    $stringFinalData .= "</div> </div> </div>";
 
     echo $stringFinalData;
 } else if (strcmp($identify_tab, "tab2") == 0) {//REVIEWER
     $i = 0;
-    $test = "";
     $stringFinalData = "<div class=\"container\"><div class=\"panel-group\" id=\"accordion2\">";
 
     foreach ($dataEvents as $field) { // controllo se in entrambi i json risulta già l'email in input 
         foreach ($field as $field2 => $value2) {
+            $test = "";
             $stringFinalData .= "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" data-parent=\"#accordion2\" href=\"#tab2" . $i . "\"  >" . $value2["conference"] . "</a></h4></div><div id=\"tab2" . $i . "\" class=\"panel-collapse collapse\">";
 
             foreach ($dataEvents as $field123 => $value123) {
@@ -50,26 +54,27 @@ if (strcmp($identify_tab, "tab1") == 0) { //CHAIR
                     }
                 }
             }
-              if(strcmp(gettype($test),"array")==0){
-            foreach ($test as $test1) {
-                $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\")'>\"" . $test1 . "</a></div>";
-            }
-            }else{
+            if (strcmp(gettype($test), "array") == 0) {
+                foreach ($test as $test1) {
+                    $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\",\"reviewer\")'>\"" . $test1 . "</a></div>";
+                }
+            } else {
                 $stringFinalData .= "<div class=\"panel-body\">" . "No matching document found." . "</div>";
             }
             $stringFinalData .= "</div></div>";
             $i++;
+            unset($test);
         }
     }
     $stringFinalData .= "</div> </div> </div>";
     echo $stringFinalData;
 } else if (strcmp($identify_tab, "tab3") == 0) {//AUTHOR
     $i = 0;
-    $test = "";
     $stringFinalData = "<div class=\"container\"><div class=\"panel-group\" id=\"accordion3\">";
 
     foreach ($dataEvents as $field) { // controllo se in entrambi i json risulta già l'email in input 
         foreach ($field as $field2 => $value2) {
+           $test = "";
             $stringFinalData .= "<div class=\"panel panel-default\"><div class=\"panel-heading\"><h4 class=\"panel-title\"><a data-toggle=\"collapse\" data-parent=\"#accordion3\" href=\"#tab3" . $i . "\"  >" . $value2["conference"] . "</a></h4></div><div id=\"tab3" . $i . "\" class=\"panel-collapse collapse\">";
 
             foreach ($dataEvents as $field123 => $value123) {
@@ -80,18 +85,19 @@ if (strcmp($identify_tab, "tab1") == 0) { //CHAIR
                     }
                 }
             }
-              if(strcmp(gettype($test),"array")==0){
-            foreach ($test as $test1) {
-                $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\")'>\"" . $test1 . "</a></div>";
-            }
-            }else{
+            if (strcmp(gettype($test), "array") == 0) {
+                foreach ($test as $test1) {
+                    $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\",\"author\")'>\"" . $test1 . "</a></div>";
+                }
+            } else {
                 $stringFinalData .= "<div class=\"panel-body\">" . "No matching document found." . "</div>";
             }
             $stringFinalData .= "</div></div>";
             $i++;
+            unset($test);
         }
     }
-     $stringFinalData .= "</div> </div> </div>";
+    $stringFinalData .= "</div> </div> </div>";
     echo $stringFinalData;
 }
 ?>

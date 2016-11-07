@@ -6,7 +6,6 @@ $dati = $_POST['dati'];
 foreach ($FirstJson as $field => $value) {
 
     if (strpos($field, $dati) !== false) {
-
         unset($FirstJson[$field]);
     }
 }

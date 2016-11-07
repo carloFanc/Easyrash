@@ -539,3 +539,9 @@ div[id*="widget"] h4 {
 #page-container-document{
     margin-top: 50px;
 }
+#listDocument{
+    margin-bottom: 15px;
+}
+#id-body{
+    padding: 3px;
+}

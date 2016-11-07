@@ -22,14 +22,11 @@ function logout() {
 }
  
 // funzione che al doppio click su un documento lo apre nel content dell'index principale
-/*function openDocument(doc){
-  $.ajax({
-    url: doc,
-    success: function(result) {
-      $("#file").html(result);
-    }
-  });
-}*/
+function openDocumentSelect(urlDocument){
+  $("#file").load("documents/"+urlDocument);
+  
+}
+
 function cambiaContenuto(string) {   //funzione che al click di un bottone nella index apre un contenuto diverso
 if(string=="profile"){
         $("#page-container").load("pages/profile.html");

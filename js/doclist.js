@@ -79,16 +79,18 @@ $(document).ready(function() { //appena si apre la pagina con i documenti carica
     
     });
   
-function openDocument(titleDoc) {
-    sessionStorage.setItem('titleDoc', titleDoc);
+function openDocument(titleDoc, role) {
+    sessionStorage.setItem('titleDoc', titleDoc);  
     
     $.ajax({
         type: 'POST',
         url: 'php/loadIndexPage.php',
-        data: {titledoc:titleDoc},
-        dataType: 'html',
-        success: function (data) {
-            sessionStorage.setItem('urlDoc', data);
+        data: {titledoc:titleDoc, role:role},
+        dataType: 'json',
+        success: function (data) {  
+            sessionStorage.setItem('urlDoc', data.urlDoc);
+            sessionStorage.setItem('titleConference', data.titleConference);
+            sessionStorage.setItem('role', data.role);
             $("#page-container").load("pages/document.html");
         }
     });
