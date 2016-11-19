@@ -24,7 +24,7 @@ function logout() {
 // funzione che al doppio click su un documento lo apre nel content dell'index principale
 function openDocumentSelect(urlDocument){
   $("#file").load("documents/"+urlDocument);
-  
+  sessionStorage.setItem('urlDoc', urlDocument);
 }
 
 function cambiaContenuto(string) {   //funzione che al click di un bottone nella index apre un contenuto diverso

@@ -61,7 +61,7 @@ blockquote {
 }
 
 .row {		
-    margin-top: 20px; 		
+    margin-top: 60px; 		
 }
 
 .col-md-4 {		 
@@ -530,18 +530,45 @@ div[id*="widget"] h4 {
     position: fixed;		
 }		
 #file {		
-    float: right;		
+    float: right;	
     width: 69%; 		
 }
+
 .navbar-right{
     margin-right: 0px;
 }
 #page-container-document{
     margin-top: 50px;
+    
 }
 #listDocument{
     margin-bottom: 15px;
 }
 #id-body{
     padding: 3px;
+}
+#judge1{
+    float:right;
+    margin-top:15px;
+    border-color:black;
+}
+#mode{
+    float:left;
+    margin-top:15px;
+    background-color:red;
+    border-color:black;
+}
+#reject{
+    float:left;
+    width: 15em;  
+    height: 4em;
+    color:white;
+    font-size : 15px;
+}
+#accept{
+    float:right;
+    width: 15em;  
+    height: 4em; 
+    color:white;
+    font-size : 15px;
 }

@@ -1,7 +1,25 @@
 <body>
     <div class="container" id="page-container-document">
+        <button type="button" onclick="buttonAnnotator()" id="mode" class="btn btn-info btn-lg">Go to Annotator Mode</button>
+        <button type="button" id="judge1" class="btn btn-info btn-lg" data-toggle="modal" data-target="#judge">Judge This Document!</button>
 
-        <div class="row">
+        <!-- Modal -->
+        <div id="judge" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <p style="font-size:medium">Judge this document.</p>
+                        <p><button id="accept" class="btn btn-success" onclick="buttonAccepted()" type="button">Accept</button><button id="reject" onclick="buttonRejected()" class="btn btn-danger" type="button">Reject</button></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Modal -->
+
+        <div id= "rowrow" class="row">
             <!-- Colonna di sinistra da popolare con Eventi e Documenti -->
             <div class="col-md-4" id="colonnaSinistra">
                 <h3>Lista documenti</h3>
@@ -43,7 +61,7 @@
             <div id="file" class="col-lg-8">
                 <div id="presentazione">
                     <ul class="nav nav-tabs nav-justified" id="tabListaDocumenti">
-                       <!-- <li ng-model="documentiInTab"><a href="#1" data-toggle="tab"></a></li> -->
+                        <!-- <li ng-model="documentiInTab"><a href="#1" data-toggle="tab"></a></li> -->
 
                     </ul>
                 </div>
@@ -56,7 +74,7 @@
                 </div>
             </div>
             <!-- fine testo del documento -->
-            
+
             <!-- Footer -->
             <footer>
                 <!-- <div class="row">
@@ -71,6 +89,8 @@
             </footer>
         </div>
         <!-- /.row -->
-    </div>
-<script type="text/javascript" src="js/editor.js"></script>
- </body>
+    </div> 
+    <script type="text/javascript" src="js/editor.js"></script>
+    <script type="text/javascript" src="js/buttonJudgeReviewer.js"></script>
+    
+</body>
