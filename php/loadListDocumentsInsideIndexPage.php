@@ -27,7 +27,7 @@ if (strcmp($role, "chair") == 0) { //CHAIR
     }
 
     foreach ($test as $test1) { 
-         $stringFinalData .= "<div class=\"panel-body\" id=\"id-body\"><a href='#' class=\"doc untouch\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
+         $stringFinalData .= "<div class=\"panel-body\" id=\"id-body\"><a href='#' class=\"doc\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
          $index++;
     }
 

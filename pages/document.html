@@ -1,7 +1,8 @@
 <body>
     <div class="container" id="page-container-document">
         <button type="button" onclick="buttonAnnotator()" id="mode" class="btn btn-info btn-lg">Go to Annotator Mode</button>
-        <button type="button" id="judge1" class="btn btn-info btn-lg" data-toggle="modal" data-target="#judge">Judge This Document!</button>
+        <div id="changeButtonWithImageJudge"></div>
+       <!--<img id="judge1" src="img/accepted.png" alt="Accepted">-->
 
         <!-- Modal -->
         <div id="judge" class="modal fade" role="dialog">
@@ -11,7 +12,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <p style="font-size:medium">Judge this document.</p>
-                        <p><button id="accept" class="btn btn-success" onclick="buttonAccepted()" type="button">Accept</button><button id="reject" onclick="buttonRejected()" class="btn btn-danger" type="button">Reject</button></p>
+                        <p><button id="accept" class="btn btn-success" onclick="buttonAccepted()" data-dismiss="modal" type="button">Accept</button>
+                            <button id="reject" onclick="buttonRejected()" class="btn btn-danger" data-dismiss="modal" type="button">Reject</button></p>
                     </div>
                 </div>
 
@@ -92,5 +94,5 @@
     </div> 
     <script type="text/javascript" src="js/editor.js"></script>
     <script type="text/javascript" src="js/buttonJudgeReviewer.js"></script>
-    
+     
 </body>

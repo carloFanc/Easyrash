@@ -548,9 +548,15 @@ div[id*="widget"] h4 {
     padding: 3px;
 }
 #judge1{
-    float:right;
+    float:right; 
     margin-top:15px;
-    border-color:black;
+    border-color:black; 
+}
+#judge1Image{
+    float:right; 
+    margin-top:15px;
+    border-color:black; 
+    height:43px;
 }
 #mode{
     float:left;
