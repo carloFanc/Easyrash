@@ -37,7 +37,7 @@ if ($flag) {
     $merge = array_merge($FirstJson, $JsonRecoveredArray);
     $FirstJson = json_encode($merge, JSON_PRETTY_PRINT);
 
-    $file = fopen('../json/listUsers.json', 'w');
+    $file = fopen('../json/listUsers.json', 'w'); 
     fwrite($file, $FirstJson);
     fclose($file);
     $success_or_failure = "1";

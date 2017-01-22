@@ -25,7 +25,7 @@ if (strcmp($identify_tab, "tab1") == 0) { //CHAIR
                     $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\",\"chair\")'>\"" . $test1 . "</a></div>";
                 }
             } else {
-                $stringFinalData .= "<div class=\"panel-body\">" . "No matching document found." . "</div>";
+                $stringFinalData .= "<div class=\"panel-body\">" . "You are not a chair for this conference." . "</div>";
             }
             $stringFinalData .= "</div></div>";
             $i++;
@@ -59,7 +59,7 @@ if (strcmp($identify_tab, "tab1") == 0) { //CHAIR
                     $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\",\"reviewer\")'>\"" . $test1 . "</a></div>";
                 }
             } else {
-                $stringFinalData .= "<div class=\"panel-body\">" . "No matching document found." . "</div>";
+                $stringFinalData .= "<div class=\"panel-body\">" . "You are not a reviewer for this conference." . "</div>";
             }
             $stringFinalData .= "</div></div>";
             $i++;
@@ -90,7 +90,7 @@ if (strcmp($identify_tab, "tab1") == 0) { //CHAIR
                     $stringFinalData .= "<div class=\"panel-body\"><a href='#' class=\"doc\" onclick='openDocument(\"$test1\",\"author\")'>\"" . $test1 . "</a></div>";
                 }
             } else {
-                $stringFinalData .= "<div class=\"panel-body\">" . "No matching document found." . "</div>";
+                $stringFinalData .= "<div class=\"panel-body\">" . "You are not a author for this conference." . "</div>";
             }
             $stringFinalData .= "</div></div>";
             $i++;

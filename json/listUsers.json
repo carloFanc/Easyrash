@@ -55,13 +55,6 @@
         "pass": "angelo.diiorio",
         "sex": "male"
     },
-    "Silvio Peroni <silvio.peroni@unibo.it>": {
-        "given_name": "Silvio",
-        "family_name": "Peroni",
-        "email": "silvio.peroni@unibo.it",
-        "pass": "silvio.peroni",
-        "sex": "male"
-    },
     "Alejandra Gonzalez-Beltran <alejandra.gonzalezbeltran@example.com>": {
         "given_name": "Alejandra",
         "family_name": "Gonzalez-Beltran",
@@ -173,6 +166,13 @@
         "email": "vahdati@example.com",
         "pass": "vahdati",
         "sex": "female"
+    },
+    "Silvio Peroni <silvio.peroni@unibo.it>": {
+        "given_name": "Silvio",
+        "family_name": "Peroni",
+        "email": "silvio.peroni@unibo.it",
+        "pass": "silvio.peroni",
+        "sex": "male"
     },
     "Fabio Vitali <fb@unibo.it>": {
         "given_name": "Fabio",

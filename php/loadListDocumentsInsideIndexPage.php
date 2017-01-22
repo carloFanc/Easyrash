@@ -27,7 +27,7 @@ if (strcmp($role, "chair") == 0) { //CHAIR
     }
 
     foreach ($test as $test1) { 
-         $stringFinalData .= "<div class=\"panel-body\" id=\"id-body\"><a href='#' class=\"doc\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
+         $stringFinalData .= "<div class=\"panel-body id-body \" id=\"$url[$index]\"><a href='#' class=\"doc\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
          $index++;
     }
 
@@ -44,8 +44,6 @@ if (strcmp($role, "chair") == 0) { //CHAIR
             if (strpos(json_encode($value123[$i]["conference"]), $titleConference) !== false) {
                 for ($p = 0; $p < count($value123[$i]["submissions"]); $p++) {
                     if (strpos(json_encode($value123[$i]["submissions"][$p]["reviewers"]), $usermail) !== false) {
-                        //$testa = json_encode($value123[$i]["submissions"][]["authors"]);
-                        
                             $test[$q] = $value123[$i]["submissions"][$p]["title"];
                             $url[$q] = $value123[$i]["submissions"][$p]["url"];
                             $q++;
@@ -56,7 +54,7 @@ if (strcmp($role, "chair") == 0) { //CHAIR
     }
 
     foreach ($test as $test1) {
-        $stringFinalData .= "<div class=\"panel-body\" id=\"id-body\"><a href='#' class=\"doc\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
+        $stringFinalData .= "<div class=\"panel-body id-body\" id=\"$url[$index]\"><a href='#' class=\"doc\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
          $index++;
     }
 
@@ -73,8 +71,6 @@ if (strcmp($role, "chair") == 0) { //CHAIR
             if (strpos(json_encode($value123[$i]["conference"]), $titleConference) !== false) {
                 for ($p = 0; $p < count($value123[$i]["submissions"]); $p++) {
                     if (strpos(json_encode($value123[$i]["submissions"][$p]["authors"]), $usermail) !== false) {
-                        //$testa = json_encode($value123[$i]["submissions"][]["authors"]);
-                        
                             $test[$q] = $value123[$i]["submissions"][$p]["title"];
                             $url[$q] = $value123[$i]["submissions"][$p]["url"];
                             $q++;
@@ -85,7 +81,7 @@ if (strcmp($role, "chair") == 0) { //CHAIR
     }
 
     foreach ($test as $test1) {
-       $stringFinalData .= "<div class=\"panel-body\" id=\"id-body\"><a href='#' class=\"doc\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
+       $stringFinalData .= "<div class=\"panel-body id-body  \" id=\"$url[$index]\"><a href='#' class=\"doc\" onclick='openDocumentSelect(\"$url[$index]\")'>\"" . $test1 . "</a></div>";
          $index++; 
     }
 

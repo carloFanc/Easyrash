@@ -4,7 +4,7 @@ $dataEvents = file_get_contents('../json/events.json');
 $dataEvents = json_decode($dataEvents, true);
 $urlDoc = $_POST['urlDocument'];
 $user = $_POST['usermail'];
-$result = "";
+$result=""; 
 $bool = false;
 $countReviewers = 0;
 $i = 0;
@@ -36,6 +36,8 @@ if ($bool) {
                 $result = "allaccepted";
             } else if (count($value["rejected"])== $countReviewers) {
                 $result = "allrejected";
+            }else if ((count($value["accepted"]) + count($value["rejected"])) == $countReviewers) {
+                $result = "alljudge";
             } else {
                 $result = "notalljudge";
             }
@@ -45,25 +47,5 @@ if ($bool) {
     $result = "undefined";
 }
  echo $result;
-
-/* foreach ($docJudgment as $field => $value) {
-  if (strpos(json_encode($field), $urlDoc) != false) {
-  $bool = true;
-  }
-  }
-  if ($bool) {
-  foreach ($docJudgment as $field => $value) {
-  if (strpos($field, $urlDoc) !== false) {
-  if (in_array($user, $value["accepted"])) {
-  $result = "accepted";
-  } else if (in_array($user, $value["rejected"])) {
-  $result = "rejected";
-  } else {
-  $result = "undefined";
-  }
-  }
-  }
-  }else{
-  $result = "undefined";
-  } */
-?>
+ 
+ ?>

@@ -14,7 +14,7 @@ foreach ($docJudgment as $field => $value) {
     }
 }
 
-if ($bool == true) {
+if ($bool) {
     foreach ($docJudgment as $field => $value) {
         if (strpos($field, $urlDoc) !== false) {
             if($eval === "accepted"){
