@@ -17,6 +17,12 @@ Ogni utente è registrato su più eventi e con ruoli diversi. Per semplificare: 
 Si accede al sistema tramite login. Dopo il login l’utente vede l’elenco degli eventi a cui è registrato e, per ogni evento, l’elenco degli articoli di quell’evento.
 EasyRASH permette di svolgere le operazioni connesse con il proprio ruolo (Chair o Reviewer o autore) per quell’evento e su ogni articolo
 
+Ogni utente può accedere ad un articolo in due modalità:
+- Reader: l’interfaccia permette di leggere il contenuto, scrollare, esaminare metadati e proprietà del documento e dei vari frammenti, cercare informazioni aggiuntive, e passare alla modalità seguente. 
+- Annotator: Un widget permette il passaggio dell'utente alla modalità annotazione, nella quale l'utente può commentare gli articoli e creare nuove annotazioni indipendentemente da quelle già esistenti, eventualmente anche in sovrapposizione totale o parziale con altre annotazioni).  La modalità annotator inoltre permette di esprimere un giudizio complessivo sull’articolo:
+Un Reviewer può dare un punteggio da 1 a 5 e un giudizio testuale
+Il Chair può aggiungere un giudizio testuale e, se tutte le review sono complete, aggiungere la decisione finale: “accepted” o “rejected”
+
 ## Eventi, paper e review
 - Ogni utente può essere Chair e/o Reviewer e/o Autore per un evento
 - Ad ogni Reviewer sono stati assegnati dal Chair uno o più paper da valutare e commentare
